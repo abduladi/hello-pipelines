@@ -22,6 +22,11 @@ steps:
     projects: '**/*Tests*.csproj'
 
 
+- task: DownloadPipelineArtifact@2
+  inputs:
+    buildType: 'current'
+    targetPath: '$(Pipeline.Workspace)'
+
 # Testing CI
 # Another test
 # Another test with pull request
